@@ -23,21 +23,24 @@ max-width: 142px;
     flex-direction: row;
     flex-wrap: nowrap;
     margin: 0 auto;
+    gap: 18px;
+    padding-bottom: 51px;
 }
+
 
 .profile__avatar {
     width: 120px;
     height: 120px;
     border-radius: 50%;
     background-color: black;
+    margin-right: calc(30px - 18px);
     
 }
 
 .profile__container {
-    display: flex;
-    flex-direction: column;
-    max-width: 336px;
-    margin-left: 30px;
+display: flex;
+flex-direction: column;
+max-width: 336px;
 
 }
 
@@ -46,6 +49,7 @@ font-weight: 500;
 font-size: 42px;
 line-height: 48px;
 margin: 0;
+
 }
 
 .profile__description {
@@ -58,9 +62,29 @@ margin-bottom: 0;
 
 
 .profile__edit-button {
+width: 24px;
+height: 24px;
+background: url(../images/icons/edit_icon.svg) no-repeat center;
+border: solid 1px #FFFFFF;
+margin-top: 15px;
 
+}
+.profile__edit-button:hover {
+    opacity: 0.6;
+    cursor: pointer;
 }
 
 .profile__add-button {
+    background: url(../images/icons/plus_icon.svg) no-repeat center;
+    height: 50px;
+    width: 150px;
+    border: solid 2px #FFFFFF;
+    align-self: center;
+    margin-left: auto;
+    padding: 0;
+}
 
+.profile__add-button:hover {
+    opacity: 0.6;
+    cursor: pointer;
 }
