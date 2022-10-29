@@ -1,4 +1,4 @@
-# Проект: [Место] (https://cyberpurpur.github.io/mesto/)
+# Проект: [Место](https://cyberpurpur.github.io/mesto/)
 
 ### Обзор
 
