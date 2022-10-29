@@ -1,0 +1,14 @@
+
+.element__like-button {
+    background: url(../../../images/icons/heart_icon.svg) no-repeat center white;
+    border-style: none;
+    width: 22px;
+    height: 19px;
+    padding: 0;
+    margin-left: auto;   
+}
+
+.element__like-button:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}

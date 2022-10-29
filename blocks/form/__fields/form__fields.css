@@ -1,0 +1,14 @@
+.form__fields {
+    display: block;
+    font-family: inherit;
+    border-style: none;
+    margin: 29px 0 0 0;
+    padding: 0;
+
+}
+
+@media screen and (max-width: 570px) {
+    .form__fields {
+        margin-top: 45px;
+    }
+}

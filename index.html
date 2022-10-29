@@ -1,74 +1,88 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
-  <title>Mesto</title>
-  <link rel="stylesheet" href="./pages/index.css">
-</head>
-<body class="root">
-  <header class="header">
-    <img class="header__logo" src="./images/logo.svg" alt="логотип проекта">
-  </header>
-<main class="main">
-<div class="profile">
-  <img class="profile__avatar" src="./images/avatar.jpg" alt="Аватар">
-  <div class="profile__container">
-    <div class="profile__title">
-      <h1 class="profile__name">Жак-Ив Кусто</h1> 
-      <button class="button profile__edit-button" type="button"></button>
-    </div>
-    <p class="profile__description">Исследователь океана</p>
-  </div>
-    <button class="button profile__add-button" type="button"></button>
-</div>
-<div class="elements">
-  <div class="element">
-    <img class="element__image" src="./images/Dombaj.jpg">
-    <div class="elment__description">
-    <p class="element__name">Домбай</p>
-    <button class="button element__like-button element__like-button_active"></button>
-    </div>
-  </div>
-  <div class="element">
-    <img class="element__image" src="./images/Dombaj.jpg">
-    <div class="elment__description">
-    <p class="element__name">Домбай</p>
-    <button class="button element__like-button"></button>
-    </div>
-  </div>
-  <div class="element">
-    <img class="element__image" src="./images/Dombaj.jpg">
-    <div class="elment__description">
-    <p class="element__name">Домбай</p>
-    <button class="button element__like-button"></button>
-    </div>
-  </div>
-  <div class="element">
-    <img class="element__image" src="./images/Dombaj.jpg">
-    <div class="elment__description">
-    <p class="element__name">Домбай</p>
-    <button class="button element__like-button"></button>
-    </div>
-  </div>
-  <div class="element">
-    <img class="element__image" src="./images/Dombaj.jpg">
-    <div class="elment__description">
-    <p class="element__name">Домбай</p>
-    <button class="button element__like-button"></button>
-    </div>
-  </div>
-  <div class="element">
-    <img class="element__image" src="./images/Dombaj.jpg">
-    <div class="elment__description">
-    <p class="element__name">Домбай</p>
-    <button class="button element__like-button"></button>
-    </div>
-  </div>
-</div>
-</main>
-<footer class="footer">
-  <p class="footer__copyright">&#169;2022 Mesto Russia</p>
-</footer>
-<script src="./index.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
+    <title>Mesto</title>
+    <link rel="stylesheet" href="./pages/index.css" />
+  </head>
+  <body class="root">
+    <header class="header">
+      <img class="header__logo" src="./images/logo.svg" alt="логотип проекта" />
+    </header>
+    <main class="main">
+      <section class="profile">
+        <img class="profile__avatar" src="./images/avatar.jpg" alt="Аватар" />
+        <div class="profile__container">
+          <div class="profile__title">
+            <h1 class="profile__name">Жак-Ив Кусто</h1>
+            <button class="button profile__edit-button" type="button"></button>
+          </div>
+          <p class="profile__description">Исследователь океана</p>
+        </div>
+        <button class="button profile__add-button" type="button"></button>
+      </section>
+      <section class="elements">
+        <div class="element">
+          <img class="element__image" src="./images/Dombaj.jpg" />
+          <div class="element__description">
+            <p class="element__name">Домбай</p>
+            <button class="button element__like-button element__like-button_active"></button>
+          </div>
+        </div>
+        <div class="element">
+          <img class="element__image" src="./images/Dombaj.jpg" />
+          <div class="element__description">
+            <p class="element__name">Домбай</p>
+            <button class="button element__like-button"></button>
+          </div>
+        </div>
+        <div class="element">
+          <img class="element__image" src="./images/Dombaj.jpg" />
+          <div class="element__description">
+            <p class="element__name">Домбай</p>
+            <button class="button element__like-button"></button>
+          </div>
+        </div>
+        <div class="element">
+          <img class="element__image" src="./images/Dombaj.jpg" />
+          <div class="element__description">
+            <p class="element__name">Домбай</p>
+            <button class="button element__like-button"></button>
+          </div>
+        </div>
+        <div class="element">
+          <img class="element__image" src="./images/Dombaj.jpg" />
+          <div class="element__description">
+            <p class="element__name">Домбай</p>
+            <button class="button element__like-button"></button>
+          </div>
+        </div>
+        <div class="element">
+          <img class="element__image" src="./images/Dombaj.jpg" />
+          <div class="element__description">
+            <p class="element__name">Домбай</p>
+            <button class="button element__like-button"></button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__copyright">&#169;2022 Mesto Russia</p>
+    </footer>
+    <section class="popup">
+      <div class="popup__container">
+        <button class="popup__close-button" type="reset"></button>
+        <h2 class="popup__title">Редактировать профиль</h2>
+        <form class="form">
+          <fieldset class="form__fields">
+            <input class="form__input form__input_name" type="text" placeholder="Имя" required />
+            <input class="form__input form__input_work" type="text" placeholder="Занятия" required />
+          </fieldset>
+          <button class="form__submit-button" type="submit">Сохранить</button>
+        </form>
+      </div>
+    </section>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>

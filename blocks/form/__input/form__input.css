@@ -1,0 +1,27 @@
+
+.form__input {
+    display: block;
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    border: 0;
+    border-bottom: 1px solid rgba(0,0,0,.2);
+    width: 358px;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    margin-top: 25px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 570px) {
+    .form__input {
+    font-size: 14px;
+    line-height: 17px;
+    width: 238px;
+    margin-top: 30px;
+    }
+}
