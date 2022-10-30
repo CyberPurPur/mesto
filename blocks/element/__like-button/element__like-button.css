@@ -4,8 +4,7 @@
     border-style: none;
     width: 22px;
     height: 19px;
-    padding: 0;
-    margin-left: auto;   
+    align-self: center;
 }
 
 .element__like-button:hover {

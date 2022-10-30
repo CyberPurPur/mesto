@@ -3,14 +3,18 @@
     width: 24px;
     height: 24px;
     background: url(../../../images/icons/edit_icon.svg) no-repeat center;
+    background-size: 10px;
     border: solid 1px #FFFFFF;
     align-self: center;
+    box-sizing: border-box;
     }
     
     @media screen and (max-width: 939px){
         .profile__edit-button {
         width: 18px;
         height: 18px;
+        padding: 0;
+        background-size: 8px;
         }
     }
 

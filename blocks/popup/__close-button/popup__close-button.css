@@ -6,8 +6,8 @@
     margin: 0;
     padding: 0;
     border: 0;
-    top: -40px;
-    right: -40px;
+    top: -42px;
+    right: -44px;
     cursor: pointer;
 }
 
@@ -16,7 +16,8 @@
         background: url(../../../images/icons/close_icon_small.svg) no-repeat center transparent;
         width: 20px;
         height: 20px;
-        right: 0;
+        top: -41px;
+        right: -2px;
     }
     
 }

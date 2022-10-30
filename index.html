@@ -23,48 +23,48 @@
         <button class="button profile__add-button" type="button"></button>
       </section>
       <section class="elements">
-        <div class="element">
+        <article class="element">
           <img class="element__image" src="./images/Dombaj.jpg" alt="Домбай"/>
           <div class="element__description">
-            <p class="element__name">Домбай</p>
-            <button class="button element__like-button element__like-button_active"></button>
+            <h2 class="element__name">Домбай</h2>
+            <button class="button element__like-button element__like-button_active" type="button"></button>
           </div>
-        </div>
-        <div class="element">
+        </article>
+        <article class="element">
           <img class="element__image" src="./images/Karachaevsk.jpg" alt="Карачаевск"/>
           <div class="element__description">
-            <p class="element__name">Карачаевск</p>
-            <button class="button element__like-button"></button>
+            <h2 class="element__name">Карачаевск</h2>
+            <button class="button element__like-button" type="button"></button>
           </div>
-        </div>
-        <div class="element">
+        </article>
+        <article class="element">
           <img class="element__image" src="./images/Dombaj.jpg" alt="Домбай" />
           <div class="element__description">
-            <p class="element__name">Домбай</p>
-            <button class="button element__like-button"></button>
+            <h2 class="element__name">Домбай</h2>
+            <button class="button element__like-button" type="button"></button>
           </div>
-        </div>
-        <div class="element">
+        </article>
+        <article class="element">
           <img class="element__image" src="./images/Dombaj.jpg" alt="Домбай"/>
           <div class="element__description">
-            <p class="element__name">Домбай</p>
-            <button class="button element__like-button"></button>
+            <h2 class="element__name">Домбай</h2>
+            <button class="button element__like-button" type="button"></button>
           </div>
-        </div>
-        <div class="element">
+        </article>
+        <article class="element">
           <img class="element__image" src="./images/Dombaj.jpg" alt="Домбай"/>
           <div class="element__description">
-            <p class="element__name">Домбай</p>
-            <button class="button element__like-button"></button>
+            <h2 class="element__name">Домбай</h2>
+            <button class="button element__like-button" type="button"></button>
           </div>
-        </div>
-        <div class="element">
+        </article>
+        <article class="element">
           <img class="element__image" src="./images/Dombaj.jpg" alt="Домбай"/>
           <div class="element__description">
-            <p class="element__name">Домбай</p>
-            <button class="button element__like-button"></button>
+            <h2 class="element__name">Домбай</h2>
+            <button class="button element__like-button" type="button"></button>
           </div>
-        </div>
+        </article>
       </section>
     </main>
     <footer class="footer">
@@ -74,10 +74,10 @@
       <div class="popup__container">
         <button class="popup__close-button" type="reset"></button>
         <h2 class="popup__title">Редактировать профиль</h2>
-        <form class="form">
+        <form class="form" name="profile_data">
           <fieldset class="form__fields">
-            <input class="form__input form__input_name" type="text" placeholder="Имя" required />
-            <input class="form__input form__input_work" type="text" placeholder="Занятия" required />
+            <input class="form__input form__fields_input_name" type="text" name="name" placeholder="Имя" required />
+            <input class="form__input form__fields_input_work" type="text" name="work" placeholder="Занятия" required />
           </fieldset>
           <button class="form__submit-button" type="submit">Сохранить</button>
         </form>
