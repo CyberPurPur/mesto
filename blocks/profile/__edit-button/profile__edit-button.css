@@ -14,7 +14,9 @@
         width: 18px;
         height: 18px;
         padding: 0;
+        align-self: end;
         background-size: 8px;
+        margin-bottom: 6px;
         }
     }
 

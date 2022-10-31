@@ -1,8 +1,10 @@
 
 .element__description {
+    max-width: 246px;
     margin: 25px 15px 0 21px;
     padding: 0 0 26px;
     display: flex;
     box-sizing: border-box;
     justify-content: space-between;
+    align-items: baseline;
 }
