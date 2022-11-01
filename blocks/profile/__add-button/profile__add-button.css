@@ -8,11 +8,12 @@
     align-self: center;
     margin-left: auto;
     padding: 0;
+    box-sizing: border-box;
 }
 
 @media screen and (max-width: 939px){
     .profile__add-button {
-    margin: 34px auto 36px;
+    margin: 34px auto 34px;
     width: 282px;
     }
 }

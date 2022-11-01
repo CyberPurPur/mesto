@@ -9,8 +9,9 @@
 @media screen and (max-width: 600px) {
     .profile__title {
         gap: 10px;
-        max-width: 282px;
-        justify-content: space-between;
-        
+        max-width: 217px;
+        align-self: center;
+        margin-left: 23px;
+        margin-top: 8px;
     }
 }

@@ -8,6 +8,7 @@
     height: 100%;
     left: 0;
     top: 0;
-    display: none;
+    /*display: none;*/
+    display: flex;
 
 }
