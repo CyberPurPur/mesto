@@ -1,0 +1,4 @@
+.popup__type_picture {
+    background-color: rgba(0,0,0,.9);
+    position: fixed;
+}
