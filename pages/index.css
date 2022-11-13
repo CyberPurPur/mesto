@@ -40,6 +40,6 @@
 
 @import url(../blocks/popup/__image/popup__image.css);
 @import url(../blocks/popup/__image-caption/popup__image-caption.css);
-@import url(../blocks/popup/__type_picture/popup__type_picture.css);
+@import url(../blocks/popup/_type_picture/popup_type_picture.css);
 @import url(../blocks/popup/__figure/popup__figure.css);
 
