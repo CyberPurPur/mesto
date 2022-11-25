@@ -37,6 +37,10 @@
 @import url(../blocks/form/__fields/form__fields.css);
 @import url(../blocks/form/__input/form__input.css);
 @import url(../blocks/form/__submit-button/form__submit-button.css);
+@import url(../blocks/form/__input/form__input.css);
+@import url(../blocks/form/__input-error/form__input-error.css);
+@import url(../blocks/form/__input-error/_active/form__input-error_active.css);
+@import url(../blocks/form/__submit-button/_inactive/form__submit-button_inactive.css);
 
 @import url(../blocks/popup/__image/popup__image.css);
 @import url(../blocks/popup/__image-caption/popup__image-caption.css);
