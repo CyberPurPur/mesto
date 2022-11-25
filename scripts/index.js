@@ -60,6 +60,8 @@ const profileSubmitHandler = (evt) => {
   closePopup(popupProfile);
 };
 
+
+
 //delete
 const deleteCard = (evt) => {
   const target = evt.target;
@@ -113,6 +115,7 @@ const addNewCard = (evt) => {
   data = { name: placeNameInput.value, link: placeLinkInput.value };
   cardEl.querySelector(".element__image").textContant = placeNameInput.value;
   renderCard(data, container);
+  document.getElementById('place_data').reset();
   closePopup(newCardElement);
 };
 
@@ -143,11 +146,9 @@ imagePopupElement.addEventListener('click', ClosePopupByClickOnOverlay);
 profileEditButtonElement.addEventListener("click", function () {
   openEditPopup(popupProfile);
 });
-
 popupCloseButtonElement.addEventListener("click", function () {
   closePopup(popupProfile);
 });
-
 placeAddBtn.addEventListener("click", function () {
   openPopup(newCardElement);
 });
