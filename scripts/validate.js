@@ -7,8 +7,6 @@ const selectors = {
   errorClass: 'form__input-error_active'
 }
 
-enableValidation(selectors);
-
 //const
 
 const formElement = document.querySelector(selectors.formSelector);
@@ -83,3 +81,4 @@ const enableValidation = () => {
   })
 };
 
+enableValidation(selectors);
