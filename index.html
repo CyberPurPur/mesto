@@ -16,11 +16,11 @@
         <div class="profile__container">
           <div class="profile__title">
             <h1 class="profile__name">Жак-Ив Кусто</h1>
-            <button class="button profile__edit-button" type="button"></button>
+            <button class="button button_open-popup profile__edit-button" type="button"></button>
           </div>
           <p class="profile__description">Исследователь океана</p>
         </div>
-        <button class="button profile__add-button" type="button"></button>
+        <button class="button button_open-popup profile__add-button" type="button"></button>
       </section>
       <section class="elements"></section>
     </main>
@@ -31,7 +31,7 @@
       <div class="popup__container">
         <button class="popup__close-button" type="reset"></button>
         <h2 class="popup__title">Редактировать профиль</h2>
-        <form class="form" name="profile_data" id="profile_data" novalidate>
+        <form class="form profile_data" name="profile_data" novalidate>
           <fieldset class="form__fields">
             <input class="form__input form__input_type_name" type="text" id="name-input" placeholder="Имя" minlength="2" maxlenght="20" required>
             <span class="form__input-error name-input-error"></span>
@@ -46,7 +46,7 @@
       <div class="popup__container">
         <button class="popup__close-button" type="reset"></button>
         <h2 class="popup__title">Новое место</h2>
-        <form class="form" name="place_data" id="place_data" novalidate>
+        <form class="form place_data" name="place_data" novalidate>
           <fieldset class="form__fields">
             <input class="form__input form__input_type_placename" type="text" id="title-input" placeholder="Название" required minlength="2" maxlenght="30">
             <span class="form__input-error title-input-error"></span>
@@ -64,7 +64,7 @@
         <figcaption class="popup__image-caption">Новое место</figcaption>
       </figure>
     </section>
-    <template id="img_template">
+    <template class="img_template">
       <article class="element">
         <img class="element__image" src="#" alt="#" />
         <button class="button element__trash-button" type="button"></button>
