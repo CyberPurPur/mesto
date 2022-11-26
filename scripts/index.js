@@ -35,12 +35,13 @@ const zoomAlt = imagePopupElement.querySelector(".popup__image-caption");
 
 const openPopup = (popup) => {
   document.addEventListener('keydown', closePopupByEsc);
-  if(popup === popupProfile) {
-  nameInput.value = nameElement.textContent;
-  workInput.value = workElement.textContent;
-  };
   popup.classList.add("popup_opened");
 };
+
+const fillProfilePopupData = () => {
+  nameInput.value = nameElement.textContent;
+  workInput.value = workElement.textContent;
+}
 
 const closePopup = function (popup) {
   document.removeEventListener('keydown', closePopupByEsc);
@@ -136,6 +137,7 @@ openPopupButtons.forEach((button) => {
   button.addEventListener('click', (evt) => {
     if (evt.target.classList.contains('profile__edit-button')) {
       openPopup(popupProfile);
+      fillProfilePopupData();
     }
     if (evt.target.classList.contains('profile__add-button')) {
       openPopup(newCardElement);
