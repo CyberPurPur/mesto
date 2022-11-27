@@ -158,23 +158,7 @@ openPopupButtons.forEach((button) => {
  });
 }
 
-/*const target = evt.target;
-
-  const submitButton = target.closest('.form')
-  submitButton.setAttribute('disabled', true);
-  submitButton.classList.add('form__submit-button_inactive');
-  */
 formPlaceElement.addEventListener("submit", addNewCard);
 formProfileElement.addEventListener("submit", handleProfileFormSubmit);
 
-//я заменила 4 строчки шестью выше, not feeling guilty about it. Спасибо, что рассказали про перебор <3
-//я оставлю слушатели здесь, на случай, если придется переделывать ;)
-/*
-profileEditButtonElement.addEventListener("click", function () {
-  openPopup(popupProfile);
-});
-placeAddBtn.addEventListener("click", function () {
-  openPopup(newCardElement);
-});
-*/
 
