@@ -7,8 +7,10 @@ const newCardElement = document.querySelector(".popup_type_new-card");
 const placeAddBtn = document.querySelector(".profile__add-button");
 
 const imagePopupElement = document.querySelector(".popup_type_picture");
-const popups = document.querySelectorAll('.popup')
-const openPopupButtons = document.querySelectorAll('.button_open-popup')
+const popups = document.querySelectorAll('.popup');
+const openPopupButtons = document.querySelectorAll('.button_open-popup');
+const submitButton = document.querySelectorAll('.form__submit-button');
+
 //popup inputs
 
 const nameInput = popupProfile.querySelector(".form__input_type_name");
@@ -16,6 +18,7 @@ const workInput = popupProfile.querySelector(".form__input_type_work");
 
 const placeNameInput = newCardElement.querySelector(".form__input_type_placename");
 const placeLinkInput = newCardElement.querySelector(".form__input_type_placelink");
+
 
 const formProfileElement = popupProfile.querySelector(".profile_data");
 const formPlaceElement = newCardElement.querySelector(".place_data");
@@ -33,9 +36,12 @@ const templatePlaceEl = imgTemplate.querySelector(".element__name");
 const zoomImg = imagePopupElement.querySelector(".popup__image");
 const zoomAlt = imagePopupElement.querySelector(".popup__image-caption");
 
-const openPopup = (popup) => {
+
+const openPopup = (popup, evt) => {
   document.addEventListener('keydown', closePopupByEsc);
   popup.classList.add("popup_opened");
+  disableSubButton();
+
 };
 
 const fillProfilePopupData = () => {
@@ -121,7 +127,7 @@ function closePopupByEsc(event) {
   }
 };
 
-
+//закрытие по клику на оверлей
 popups.forEach((popup) => {
   popup.addEventListener('mousedown', (evt) => {
       if (evt.target.classList.contains('popup_opened')) {
@@ -144,11 +150,26 @@ openPopupButtons.forEach((button) => {
     }
   })
   });
-  
-/*
-я заменила 4 строчки шестью выше, not feeling guilty about it. Спасибо, что рассказали про перебор <3
-я оставлю слушатели здесь, на случай, если придется переделывать ;)
 
+ const disableSubButton = () => {
+    submitButton.forEach((subButton) => {
+      subButton.setAttribute('disabled', true);
+      subButton.classList.add('form__submit-button_inactive');
+ });
+}
+
+/*const target = evt.target;
+
+  const submitButton = target.closest('.form')
+  submitButton.setAttribute('disabled', true);
+  submitButton.classList.add('form__submit-button_inactive');
+  */
+formPlaceElement.addEventListener("submit", addNewCard);
+formProfileElement.addEventListener("submit", handleProfileFormSubmit);
+
+//я заменила 4 строчки шестью выше, not feeling guilty about it. Спасибо, что рассказали про перебор <3
+//я оставлю слушатели здесь, на случай, если придется переделывать ;)
+/*
 profileEditButtonElement.addEventListener("click", function () {
   openPopup(popupProfile);
 });
@@ -157,5 +178,3 @@ placeAddBtn.addEventListener("click", function () {
 });
 */
 
-formPlaceElement.addEventListener("submit", addNewCard);
-formProfileElement.addEventListener("submit", handleProfileFormSubmit);
