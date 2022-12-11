@@ -15,8 +15,8 @@ const workInput = popupProfile.querySelector(".form__input_type_work");
 const placeNameInput = newCardElement.querySelector(".form__input_type_placename");
 const placeLinkInput = newCardElement.querySelector(".form__input_type_placelink");
 
-const formProfileElement = popupProfile.querySelector(".form__profile-data");
-const formPlaceElement = newCardElement.querySelector(".form__place-data");
+const formProfileElement = popupProfile.querySelector(".profile-data");
+const formPlaceElement = newCardElement.querySelector(".place-data");
 
 const nameElement = document.querySelector(".profile__name");
 const workElement = document.querySelector(".profile__description");
