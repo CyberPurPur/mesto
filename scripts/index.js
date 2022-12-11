@@ -68,24 +68,24 @@ function closePopupByEsc(event) {
 
 //закрытие по клику на оверлей
 popups.forEach((popup) => {
-  popup.addEventListener('mousedown', (evt) => {
-      if (evt.target.classList.contains('popup_opened')) {
-          closePopup(popup)
-      }
-      if (evt.target.classList.contains('popup__close-button')) {
+popup.addEventListener('mousedown', (evt) => {
+    if (evt.target.classList.contains('popup_opened')) {
         closePopup(popup)
+      }
+    if (evt.target.classList.contains('popup__close-button')) {
+      closePopup(popup)
       }
   })
 })
 
 
 openPopupButtons.forEach((button) => {
-  button.addEventListener('click', (evt) => {
-    if (evt.target.classList.contains('profile__edit-button')) {
-      openPopup(popupProfile);
-      fillProfilePopupData();
+button.addEventListener('click', (evt) => {
+  if (evt.target.classList.contains('profile__edit-button')) {
+    openPopup(popupProfile);
+    fillProfilePopupData();
     }
-    if (evt.target.classList.contains('profile__add-button')) {
+  if (evt.target.classList.contains('profile__add-button')) {
       openPopup(newCardElement);
     }
   })

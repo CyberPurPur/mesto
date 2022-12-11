@@ -15,8 +15,8 @@ const workInput = popupProfile.querySelector(".form__input_type_work");
 const placeNameInput = newCardElement.querySelector(".form__input_type_placename");
 const placeLinkInput = newCardElement.querySelector(".form__input_type_placelink");
 
-const formProfileElement = popupProfile.querySelector(".profile_data");
-const formPlaceElement = newCardElement.querySelector(".place_data");
+const formProfileElement = popupProfile.querySelector(".form__profile-data");
+const formPlaceElement = newCardElement.querySelector(".form__place-data");
 
 const nameElement = document.querySelector(".profile__name");
 const workElement = document.querySelector(".profile__description");
@@ -34,7 +34,7 @@ export const selectors = {
     inputErrorClass: 'form__input-error',
     errorClass: 'form__input-error_active'
   }
-  export {
+export {
     popupProfile, newCardElement, imagePopupElement, popups, 
     openPopupButtons, nameInput, workInput, placeNameInput, placeLinkInput, 
     formProfileElement, formPlaceElement, nameElement, workElement, container, 
