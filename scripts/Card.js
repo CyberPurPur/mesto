@@ -1,13 +1,14 @@
 export default class Card {
-    constructor(name, link, zoomImage) {
+    constructor(name, link, zoomImage, cardSelector) {
         this._name = name;
         this._link = link;
-        this._zoomImage = zoomImage;  
+        this._zoomImage = zoomImage;
+        this._cardSelector = cardSelector; 
     }
 
 _getTemplate() {
     const cardElement = document
-    .querySelector(".img_template").content
+    .querySelector(this._cardSelector).content
     .querySelector(".element").cloneNode(true)
     return cardElement;
 }

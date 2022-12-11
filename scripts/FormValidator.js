@@ -34,7 +34,7 @@ _hasInvalidInput = () => {
   })
 }
 
-toggleButtonState = ()  => {
+_toggleButtonState = ()  => {
   if (this._hasInvalidInput()) {
     this._buttonElement.setAttribute('disabled', true);
     this._buttonElement.classList.add(this._selectors.inactiveButtonClass);
@@ -45,11 +45,11 @@ toggleButtonState = ()  => {
 }
 
 _setEventListeners = () => {
-  this.toggleButtonState();
+  this._toggleButtonState();
   this._inputList.forEach((inputElement) => {
   inputElement.addEventListener('input', () => {
   this._checkValidity(inputElement);
-  this.toggleButtonState();
+  this._toggleButtonState();
 });
 });
 this._formElement.addEventListener('submit', evt => evt.preventDefault())
