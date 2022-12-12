@@ -40,19 +40,24 @@ const zoomImage = (link, name) => {
   container.prepend(cardElement);
 };
 
+//собираем карточку 
+
+function createCard(name, link, zoomImage, cardSelector) {
+  const card = new Card(name, link, zoomImage, cardSelector);
+  const cardElement = card.prepareCard();
+  renderCard(cardElement)
+};
+
 //проходим по массиву
 initialCards.forEach((item) => {
-  const card = new Card(item.name, item.link, zoomImage, '.img-template');
-  const cardElement = card.prepareCard();
-  renderCard(cardElement);
+  createCard(item.name, item.link, zoomImage, '.img-template');
 });
+
 //генерим картинку из попапа
 const addNewCard = (name, link) => {
   name = placeNameInput.value;
   link = placeLinkInput.value;
-  const addedCardElement = new Card(name, link, zoomImage, '.img-template')
-  const cardElement = addedCardElement.prepareCard();
-  renderCard(cardElement);
+  createCard(name, link, zoomImage, '.img-template');
   formPlaceElement.reset();
   closePopup(newCardElement);
 }

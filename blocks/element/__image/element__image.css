@@ -4,6 +4,10 @@
     max-width: 282px;
     width: 100%;
     height: 282px;
-   
+    display: block;
     }
     
+.element__image:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
