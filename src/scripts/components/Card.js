@@ -1,8 +1,8 @@
 export default class Card {
-    constructor(name, link, zoomImage, cardSelector) {
+    constructor(name, link, handleCardClick, cardSelector) {
         this._name = name;
         this._link = link;
-        this._zoomImage = zoomImage;
+        this._handleCardClick = handleCardClick;
         this._cardSelector = cardSelector; 
     }
 
@@ -37,8 +37,9 @@ _handleDeleteBtnClick = () => {
     this._element = null;
         }
 
+
 _setEventListeners() {
-    this._image.addEventListener('click', () => this._zoomImage(this._link, this._name));
+    this._image.addEventListener('click', () => this._handleCardClick(this._link, this._name));
     this._likeBtn.addEventListener('click', () => this._handleLikeBtnClick());
     this._trashBtn.addEventListener('click', () => this._handleDeleteBtnClick())
      }

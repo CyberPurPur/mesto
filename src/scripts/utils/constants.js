@@ -7,6 +7,11 @@ const imagePopupElement = document.querySelector(".popup_type_picture");
 const popups = document.querySelectorAll('.popup');
 const openPopupButtons = document.querySelectorAll('.button_open-popup');
 
+
+//buttons
+const editBtn = document.querySelector(".profile__edit-button");
+const addCardBtn = document.querySelector(".profile__add-button");
+
 //popup inputs
 
 const nameInput = popupProfile.querySelector(".form__input_type_name");
@@ -38,5 +43,7 @@ export {
     popupProfile, newCardElement, imagePopupElement, popups, 
     openPopupButtons, nameInput, workInput, placeNameInput, placeLinkInput, 
     formProfileElement, formPlaceElement, nameElement, workElement, container, 
-    zoomImg, zoomAlt
+    zoomImg, zoomAlt, editBtn, addCardBtn
   }
+
+  
