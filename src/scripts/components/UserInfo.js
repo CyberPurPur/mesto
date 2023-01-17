@@ -14,7 +14,7 @@ export default class UserInfo {
 
     setUserInfo(data) {
         this._name.textContent = data.userName;
-        this._work.textContent = data.workName; // textContent не может из strig, а без него не постит
+        this._work.textContent = data.workName; 
         
     }
 }
