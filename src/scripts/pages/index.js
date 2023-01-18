@@ -22,13 +22,12 @@ const popupTypeEdit = new PopupWithForm('.popup_type_edit', handleEditFormSubmit
 popupTypeEdit.setEventListeners();
 
     const editBtnHandleClick = () => {  
-      formPriofileValidator.enableValidation();
       popupTypeEdit.setInputValues(userInfo.getUserInfo())
+      formPriofileValidator.resetValidation()
       popupTypeEdit.open();
   }
 
-//профиль
-
+//экземпляр профиля
 const userInfo = new UserInfo({ 
   userName: '.profile__name', 
   workName: '.profile__description' } );
@@ -36,34 +35,32 @@ const userInfo = new UserInfo({
 
 //зум картинки
 const popupWithZoom = new PopupWithImage(".popup_type_picture");
-popupWithZoom.setEventListeners();
-
 const handleCardClick = (link, name) => {
   popupWithZoom.open(link, name);
 };
-
-
-
+//открываем форму добавления карточки
   const newCardBtnClick = () => {
-    formImageValidator.enableValidation();
+    formImageValidator.resetValidation();
     popUpTypePicture.open();
   }
 
+//сабмит формы для добавления карточки + добавление карточки 
   const handleCardFormSubmit = (data) => {
-    section.addItem(createCard({name: data.name, link: data.link}))
-      formPriofileValidator.resetValidation(); 
+    section.addItem(createCard({name: data.name, link: data.link})) 
       popUpTypePicture.close()
   }
 
+//экземпляр попапа добавляения карточки
   const popUpTypePicture = new PopupWithForm('.popup_type_new-card', handleCardFormSubmit)
   popUpTypePicture.setEventListeners();
-
+  
+//отрисовка карточки
  const createCard = (cardData) => {
   const card = new Card(cardData.name, cardData.link, handleCardClick, '.img-template')
   const cardElement = card.prepareCard();
   return cardElement;
  }
-
+//создание экземпляра секции
  const section = new Section({items: initialCards, 
   renderer: (card) => {
     section.addItem(createCard(card))} 
@@ -73,8 +70,11 @@ section.renderElement()
 
 
 //валидация
-const formPriofileValidator = new FormValidator (selectors, popupProfile)
+const formPriofileValidator = new FormValidator (selectors, popupProfile);
+formPriofileValidator.enableValidation();
+
 const formImageValidator = new FormValidator (selectors, newCardElement);
+formImageValidator.enableValidation();
 
 
 //слушатели кнопок открытия попапов
