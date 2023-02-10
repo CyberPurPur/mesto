@@ -31,6 +31,8 @@ const container = document.querySelector(".elements");
 const zoomImg = imagePopupElement.querySelector(".popup__image");
 const zoomAlt = imagePopupElement.querySelector(".popup__image-caption");
 
+const avatar = document.querySelector(".profile__avatar");
+
 export const selectors = {
     formSelector: '.form',
     inputSelector: '.form__input',
@@ -43,7 +45,7 @@ export {
     popupProfile, newCardElement, imagePopupElement, popups, 
     openPopupButtons, nameInput, workInput, placeNameInput, placeLinkInput, 
     formProfileElement, formPlaceElement, nameElement, workElement, container, 
-    zoomImg, zoomAlt, editBtn, addCardBtn
+    zoomImg, zoomAlt, editBtn, addCardBtn, avatar
   }
 
   

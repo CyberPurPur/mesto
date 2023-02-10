@@ -1,14 +1,38 @@
 import './index.css';
 
 import Card from '../components/Card.js';
-import { initialCards } from '../utils/cards.js';
+//import { initialCards } from '../utils/cards.js';
 import FormValidator from '../components/FormValidator.js';
 import { popupProfile, newCardElement, nameInput, workInput, placeNameInput,
-placeLinkInput, container, editBtn, addCardBtn, zoomImg, zoomAlt, selectors } from '../utils/constants.js';
+placeLinkInput, container, editBtn, addCardBtn, zoomImg, zoomAlt, selectors, avatar } from '../utils/constants.js';
 import Section from '../components/Section.js';
 import PopupWithForm from '../components/PopupWithForm.js';
 import PopupWithImage from '../components/PopupWithImage.js';
 import UserInfo from '../components/UserInfo.js';
+import Api from '../components/Api.js';
+
+
+const api = new Api({
+  baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-57',
+  headers: {
+    authorization: 'a22c0890-1d02-4995-b901-399b42cddbef',
+    'Content-Type': 'application/json'
+  }
+  });
+
+  //загрузка карточек
+let userId;
+
+Promise.all([api.getInitialCards(), api.getUserId()])
+.then(([initialCards, userData]) => {
+  userInfo.setUserInfo(userData.name, userData.about)
+  userId = userData._id;
+  section.renderElement(initialCards);
+})
+.catch((err) => {
+  console.log(`Ошибка: ${err}`)
+})
+
 
 
 //редактирование профиля
@@ -30,7 +54,9 @@ popupTypeEdit.setEventListeners();
 //экземпляр профиля
 const userInfo = new UserInfo({ 
   userName: '.profile__name', 
-  workName: '.profile__description' } );
+  workName: '.profile__description',
+  avatar: '.profile__avatar'
+} );
 
 
 //зум картинки
@@ -38,6 +64,7 @@ const popupWithZoom = new PopupWithImage(".popup_type_picture");
 const handleCardClick = (link, name) => {
   popupWithZoom.open(link, name);
 };
+
 //открываем форму добавления карточки
   const newCardBtnClick = () => {
     formImageValidator.resetValidation();
@@ -61,12 +88,12 @@ const handleCardClick = (link, name) => {
   return cardElement;
  }
 //создание экземпляра секции
- const section = new Section({items: initialCards, 
+ const section = new Section({ 
   renderer: (card) => {
     section.addItem(createCard(card))} 
 },
 container);
-section.renderElement()
+//section.renderElement()
 
 
 //валидация
