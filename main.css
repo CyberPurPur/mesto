@@ -38,7 +38,7 @@
 .popup__image-caption{font-size:12px;font-weight:400;line-height:15px;margin-top:10px}
 .popup_type_picture{background-color:rgba(0,0,0,.9);position:fixed}
 .popup__figure{position:relative}
-.popup__container-confirmation{padding:34px,36px,36px,36px}
+.popup__container-confirmation{padding:34px 36px 36px}
 .form__submit-confirmation{margin-top:38px}
 
 
