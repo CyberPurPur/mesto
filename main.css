@@ -39,6 +39,7 @@
 .popup_type_picture{background-color:rgba(0,0,0,.9);position:fixed}
 .popup__figure{position:relative}
 .popup_type_confirmation{visibility:visible}
+.form__submit-confirmation{margin-top:38px}
 
 
 /*# sourceMappingURL=main.css.map*/
