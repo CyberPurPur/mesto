@@ -2,6 +2,9 @@
 
 const popupProfile = document.querySelector(".popup_type_edit");
 const newCardElement = document.querySelector(".popup_type_new-card");
+const avatarPopup = document.querySelector(".popup_type_edit-avatar");
+const confirmPopup = document.querySelector(".popup_type_confirmation")
+
 
 const imagePopupElement = document.querySelector(".popup_type_picture");
 const popups = document.querySelectorAll('.popup');
@@ -11,7 +14,8 @@ const openPopupButtons = document.querySelectorAll('.button_open-popup');
 //buttons
 const editBtn = document.querySelector(".profile__edit-button");
 const addCardBtn = document.querySelector(".profile__add-button");
-
+const avatarBtn = document.querySelector('.profile__avatar-edit');
+const deleteBtn = document.querySelector('.element__trash-button');
 //popup inputs
 
 const nameInput = popupProfile.querySelector(".form__input_type_name");
@@ -33,6 +37,7 @@ const zoomAlt = imagePopupElement.querySelector(".popup__image-caption");
 
 const avatar = document.querySelector(".profile__avatar");
 
+
 export const selectors = {
     formSelector: '.form',
     inputSelector: '.form__input',
@@ -45,7 +50,7 @@ export {
     popupProfile, newCardElement, imagePopupElement, popups, 
     openPopupButtons, nameInput, workInput, placeNameInput, placeLinkInput, 
     formProfileElement, formPlaceElement, nameElement, workElement, container, 
-    zoomImg, zoomAlt, editBtn, addCardBtn, avatar
+    zoomImg, zoomAlt, editBtn, addCardBtn, avatar, avatarBtn, avatarPopup, confirmPopup, deleteBtn
   }
 
   

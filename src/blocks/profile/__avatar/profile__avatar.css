@@ -7,6 +7,7 @@
     object-fit: cover;
 }
 
+
 @media screen and (max-width: 939px){
     .profile__avatar {
     margin-bottom: 18px;

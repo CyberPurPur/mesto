@@ -7,17 +7,18 @@
   </head>
   <body class="root">
     <header class="header">
-      <img class="header__logo" src="<%=require("./images/logo.svg")%>" alt="логотип проекта" />
+   <div class="header__logo"></div>
     </header>
     <main class="content">
       <section class="profile">
-        <img class="profile__avatar" src="#" alt="Аватар" />
+          <img class="profile__avatar" src="#" alt="Аватар" />
+          <button class="button button_open-popup profile__avatar-edit" type="button"></button>
         <div class="profile__container">
           <div class="profile__title">
-            <h1 class="profile__name" name="userName">Жак-Ив Кусто</h1>
+            <h1 class="profile__name" name="userName"></h1>
             <button class="button button_open-popup profile__edit-button" type="button"></button>
           </div>
-          <p class="profile__description" name="workName">Исследователь океана</p>
+          <p class="profile__description" name="workName"></p>
         </div>
         <button class="button button_open-popup profile__add-button" type="button"></button>
       </section>
@@ -56,6 +57,28 @@
         </form>
       </div>
     </section>
+    <section class="popup popup_type_edit-avatar">
+      <div class="popup__container">
+        <button class="popup__close-button" type="reset"></button>
+        <h2 class="popup__title popup__title_avatar">Обновить аватар</h2>
+        <form class="form avatar-data" name="avatar_data" novalidate>
+         <fieldset class="form__fields">
+            <input class="form__input form__input_type_avatarlink" type="url" id="avatar-input" name="avatar" placeholder="Ссылка на аватар" required>
+            <span class="form__input-error avatar-input-error"></span>
+          </fieldset>
+          <button class="form__submit-button" type="submit">Сохранить</button>
+        </form>
+      </div>
+    </section>
+    <section class="popup popup_type_confirmation">
+      <div class="popup__container popup__container-confirmation">
+        <button class="popup__close-button" type="reset"></button>
+        <h2 class="popup__title">Вы уверены?</h2>
+        <form class="form delete-form" name="delete-form" novalidate>
+        <button class="form__submit-button form__submit-confirmation" type="submit">Да</button>
+        </form>     
+      </div>
+    </section>
     <section class="popup popup_type_picture">
       <figure class="popup__figure">
         <button class="popup__close-button" type="reset"></button>
@@ -65,13 +88,18 @@
     </section>
     <template class="img-template">
       <article class="element">
-        <img class="element__image" src="#" alt="#" />
+        <img class="element__image" src="#" alt="#">
         <button class="button element__trash-button" type="button"></button>
         <div class="element__description">
           <h2 class="element__name"></h2>
+          <div class="element__like">
           <button class="button element__like-button" type="button"></button>
+          <span class="element__like-number"></span>
+        </div>
         </div>
       </article>
     </template>
+    <!-- <src="<%=require("./images/logo.svg")%>" -->
+
   </body>
 </html>
