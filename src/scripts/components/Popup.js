@@ -4,6 +4,7 @@ export default class Popup {
     this._closePopupByEsc = this._handleEscClose.bind(this);
     this._closeBtn = this._popup.querySelector('.popup__close-button');
     this._closeByOverlayClick = this._handleOverlayClose.bind(this);
+    this._submitBtn = this._popup.querySelector('.form__submit-button');
 
     }
 
@@ -34,5 +35,8 @@ export default class Popup {
           }); 
 }
 
+loading(string) {
+    this._submitBtn.textContent = `${string}`
+}
    
 }

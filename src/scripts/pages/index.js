@@ -19,6 +19,14 @@ const api = new Api({
   }
   });
   
+//создание экземпляра секции
+ const section = new Section({ 
+   renderer: (card) => {
+   section.addItemLastToFirst(createCard(card))} 
+},
+container);
+
+
 //экземпляр профиля
 const userInfo = new UserInfo({ 
   userName: '.profile__name', 
@@ -32,6 +40,7 @@ let userId
 Promise.all([api.getUserId(), api.getInitialCards()])
 .then(([userData, initialCards]) => {
   userInfo.setUserInfo(userData)
+  userInfo.setNewAvatar(userData)
   userId = userData._id
   section.renderElement(initialCards)
 })
@@ -42,7 +51,7 @@ console.log(`Ошибка в загрузке данных. ${err}`)
 //редактирование профиля
 
 function handleEditFormSubmit(data)  {
-  popupTypeEdit.loading(true)
+  popupTypeEdit.loading("Сохранение...")
   api.editUserInfo(data)
   .then((data) => {
   userInfo.setUserInfo(data);
@@ -52,7 +61,7 @@ function handleEditFormSubmit(data)  {
     console.log(`Ошибка в редактировании профиля. ${err}`)
   })
 .finally(() => {
-  popupTypeEdit.loading(false)
+  popupTypeEdit.loading("Сохранить")
 })
 }
 
@@ -75,17 +84,17 @@ const handleAvatarClick = () => {
 }
 
 function handleAvatarFormSubmit(data) {
-  popUpEditAvatar.loading(true) 
+  popUpEditAvatar.loading("Сохранение...") 
   api.editUserAvatar(data)
   .then((data) => {
-    avatar.src = data.avatar
+    userInfo.setNewAvatar(data)
     popUpEditAvatar.close()
   })
   .catch((err) => {
     console.log(`Ошибка в замене аватара. ${err}`)
   })
   .finally(() => {
-    popUpEditAvatar.loading(false) 
+    popUpEditAvatar.loading("Сохранить")
   })
 }
 
@@ -104,7 +113,7 @@ popupWithZoom.open(link, name);
 
 //постим карточку
   const handleCardFormSubmit = (formData) => {
-    popUpTypePicture.loading(true); 
+    popUpTypePicture.loading('Сохранение...'); 
     api.postNewCard(formData)
     .then((formData) => {
       section.addItem(createCard(formData));
@@ -114,7 +123,7 @@ popupWithZoom.open(link, name);
       console.log(`Ошибка в добавлении карточки. ${err}`)
     })
     .finally(() => {
-      popUpTypePicture.loading(false)
+      popUpTypePicture.loading("Сохранить")
     })
   }
 
@@ -129,18 +138,21 @@ const createCard = (data) => {
     data: data, 
     handleCardClick: handleCardClick, 
     cardSelector: '.img-template',
-    userId: userId,
+    userId,
     handleTrashBtnClick: (cardId) => {
       popupWithConfirmation.open(),
       popupWithConfirmation.submitCallback(() => {
+      popupWithConfirmation.loading("Удаление...")
         api.deleteCard(cardId)
         .then(() => {
-          popupWithConfirmation.close();
           card.removeCard()
+          popupWithConfirmation.close()
         })
         .catch((err) => {
           console.log(`Ошибка в удалении карточки. ${err}`)
         })
+        .finally(() => { 
+          popupWithConfirmation.loading("Да")})
       })
     },
     handleSetLike: (cardId) => {
@@ -167,12 +179,6 @@ const createCard = (data) => {
  }
 
 
-//создание экземпляра секции
- const section = new Section({ 
-  renderer: (card) => {
-    section.addItem(createCard(card))} 
-},
-container);
 
 //поап подтверждения удаления
 const popupWithConfirmation = new PopupWithSubmit(".popup_type_confirmation")

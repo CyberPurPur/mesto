@@ -33,9 +33,9 @@
         <h2 class="popup__title">Редактировать профиль</h2>
         <form class="form profile-data" name="profile_data" novalidate>
           <fieldset class="form__fields">
-            <input class="form__input form__input_type_name" type="text" id="name-input" name="userName" placeholder="Имя" minlength="2" maxlenght="20" required>
+            <input class="form__input form__input_type_name" type="text" id="name-input" name="userName" placeholder="Имя" minlength="2" maxlength="20" required>
             <span class="form__input-error name-input-error"></span>
-            <input class="form__input form__input_type_work" type="text" id="work-input" name="workName" placeholder="Занятия" minlength="2" maxlenght="200" required>
+            <input class="form__input form__input_type_work" type="text" id="work-input" name="workName" placeholder="Занятия" minlength="2" maxlength="200" required>
             <span class="form__input-error work-input-error"></span>
           </fieldset>
           <button class="form__submit-button" type="submit">Сохранить</button>
@@ -48,7 +48,7 @@
         <h2 class="popup__title">Новое место</h2>
         <form class="form place-data" name="place_data" novalidate>
           <fieldset class="form__fields">
-            <input class="form__input form__input_type_placename" type="text" id="title-input" name="name" placeholder="Название" required minlength="2" maxlenght="30">
+            <input class="form__input form__input_type_placename" type="text" id="title-input" name="name" placeholder="Название" required minlength="2" maxlength="30">
             <span class="form__input-error title-input-error"></span>
             <input class="form__input form__input_type_placelink" type="url" id="image-input" name="link" placeholder="Ссылка на картинку" required>
             <span class="form__input-error image-input-error"></span>
@@ -74,9 +74,7 @@
       <div class="popup__container popup__container-confirmation">
         <button class="popup__close-button" type="reset"></button>
         <h2 class="popup__title">Вы уверены?</h2>
-        <form class="form delete-form" name="delete-form" novalidate>
-        <button class="form__submit-button form__submit-confirmation" type="submit">Да</button>
-        </form>     
+        <button class="form__submit-button form__submit-confirmation" type="submit">Да</button>    
       </div>
     </section>
     <section class="popup popup_type_picture">

@@ -11,4 +11,9 @@ renderElement(data) {
 addItem(cardData) {
     this._container.prepend(cardData);     
 }
+
+addItemLastToFirst(cardData) {
+    this._container.append(cardData); 
+}
+
 }
